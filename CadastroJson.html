@@ -1,7 +1,5 @@
 <!--
- Exemplo de como recuperar dados de um form e converte-los para JSON.
- --
- I.S.V
+ Exemplo de como recuperar dados de um form e converte-los para uma string JSON.
 -->
 <html>
 <head>
@@ -37,6 +35,7 @@
 					console.log("Erro ao processar requisicao: " + textStatus + ". " + errorThrown);
 				});
 				
+				//impedimos a requisicao submit padrao do formulario
 				event.preventDefault();
 			});
 		});
