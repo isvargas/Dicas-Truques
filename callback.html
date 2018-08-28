@@ -3,29 +3,29 @@
   <!-- 
     Exemplo basico de como utilizar callbacks em JavaScript 
   -->
-	<script>
-    <!-- funcao destino -->
-    function getProdutos(categoria, callback) {
-			var produtos = 'TESTE';
-			callback(produtos);
-		}
+  <script>
+  	<!-- funcao destino -->
+    	function getProdutos(categoria, callback) {
+		var produtos = 'TESTE';
+		callback(produtos);
+	}
 		
-    <!-- funcao q sera enviada como callback -->
-		function showProduto(produto) {
+    	<!-- funcao q sera enviada como callback -->
+	function showProduto(produto) {
+		alert(produto);
+	}
+		
+    	<!-- chamamos a funcao destino enviando a funcao showProduto como callback -->
+	function teste() {
+		getProdutos(1, showProduto);
+	}
+		
+    	<!- aqui fazemos a mesma coisa, porem definimos a funcao de callback como metodo anonimo, sem defini-la previamente -->
+	function teste2() {
+		getProdutos(1, function(produto) {
 			alert(produto);
-		}
-		
-    <!-- chamamos a funcao destino enviando a funcao showProduto como callback -->
-		function teste() {
-			getProdutos(1, showProduto);
-		}
-		
-    <!- aqui fazemos a mesma coisa, porem definimos a funcao de callback como metodo anonimo, sem defini-la previamente -->
-		function teste2() {
-			getProdutos(1, function(produto) {
-				alert(produto);
-			});
-		}
+		});
+	}
 	</script>
 </head>
 <body>
