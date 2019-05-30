@@ -1,11 +1,14 @@
 function cadastrar() {
-        var dados = $("#frmCadastro").serialize();
+        var dados = new FormData( $("#frmCadastro") );
+        //obs: o form deve estar com enctype="multipart/form-data"
         
         $.ajax({
             url: 'exemplo.php',
-            dataType: 'html',
+            //dataType: 'html',
             type: 'POST',
             data: dados,
+            processData: false,
+            contentType: false,
             beforeSend: function() {
                 $('#alerta').html('Aguarde...'); 
             },
