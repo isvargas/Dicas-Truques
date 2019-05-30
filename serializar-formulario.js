@@ -1,5 +1,5 @@
 function cadastrar() {
-        var dados = $("frmCadastro").serialize();
+        var dados = $("#frmCadastro").serialize();
         
         $.ajax({
             url: '<?= base_url('Controller/action') ?>',
