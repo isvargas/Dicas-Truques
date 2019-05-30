@@ -2,7 +2,7 @@ function cadastrar() {
         var dados = $("#frmCadastro").serialize();
         
         $.ajax({
-            url: '<?= base_url('Controller/action') ?>',
+            url: 'exemplo.php',
             dataType: 'html',
             type: 'POST',
             data: dados,
